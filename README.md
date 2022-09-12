@@ -19,26 +19,26 @@ The method in the controller doing the action and sending the data to the front-
 - I create variable which is holding the $items variable as a collection and then I create another variable $allcount which is holding $all variable with applied count() method on it to count the returned data.
 
 
-- Count the number of orders that were FREE?**
+<b>Count the number of orders that were FREE?</b>
 -  In the $free variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'price' array element equal on '0' and I am applying count() method to count the returned data.
 
-- Count the number of orders that were placed in GBP?**
+<b>Count the number of orders that were placed in GBP?</b>
 -  In the $gbp variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP' and I am applying count() method  to count the returned data.
 
 
--Count the number of orders that were shipped to Essex?**
+<b>Count the number of orders that were shipped to Essex?</b>
 -  In the $essex variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'county' array element equal on 'Essex' and I am applying count() method  to count the returned data.
 
 
--Sum the cost of orders that were placed in GBP and were £100 or more?**
+<b>Sum the cost of orders that were placed in GBP and were £100 or more?</b>
 -  In the $gbp100sum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' equal or bigger than '100' and I am applying sum() method to sum the returned data.
 
--Sum the cost of orders that were placed in GBP?**
+<b>Sum the cost of orders that were placed in GBP?</b>
 In the $gbpsum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' and I am applying sum() method to sum the returned data.
 
 
-Sum the cost of orders that were placed in GBP and were shipped to Essex?**
-In the $gbpsumessex variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'county' and I am applying sum() method to sum the returned data.
+<b>Sum the cost of orders that were placed in GBP and were shipped to Essex?</b>
+ - In the $gbpsumessex variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'county' and I am applying sum() method to sum the returned data.
 
 
 
