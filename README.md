@@ -34,7 +34,7 @@ The method in the controller doing the action and sending the data to the front-
 -  In the $gbp100sum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' equal or bigger than '100' and I am applying sum() method to sum the returned data.
 
 <b>Sum the cost of orders that were placed in GBP?</b>
-In the $gbpsum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' and I am applying sum() method to sum the returned data.
+ - In the $gbpsum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' and I am applying sum() method to sum the returned data.
 
 
 <b>Sum the cost of orders that were placed in GBP and were shipped to Essex?</b>
