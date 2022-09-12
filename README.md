@@ -1,51 +1,56 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Explanation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+I have copied the orders.json to my storage folder and then I create a separate controller (Orders Controller) to complete the actions point from the test. 
+I have point the controller and the method to the home route. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The method in the controller doing the action and sending the data to the front-end is orders() 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. I'm getting the data from the JSON file
+2. with json_decode im converting the data from json object to a php object we have 2 parameters the first one is the variable with the json object and second parameter is TRUE which means JSON objects will be returned as associative arrays.
+3.I'm wrapping the data into a collection each and every time which is giving me option to apply lots of methods to manipulate with the data inside.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Answers
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+- Count the total number of orders?**
+- I create variable which is holding the $items variable as a collection and then I create another variable $allcount which is holding $all variable with applied count() method on it to count the returned data.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+- Count the number of orders that were FREE?**
+-  In the $free variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'price' array element equal on '0' and I am applying count() method to count the returned data.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Count the number of orders that were placed in GBP?**
+-  In the $gbp variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP' and I am applying count() method  to count the returned data.
+
+
+-Count the number of orders that were shipped to Essex?**
+-  In the $essex variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'county' array element equal on 'Essex' and I am applying count() method  to count the returned data.
+
+
+-Sum the cost of orders that were placed in GBP and were £100 or more?**
+-  In the $gbp100sum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' equal or bigger than '100' and I am applying sum() method to sum the returned data.
+
+-Sum the cost of orders that were placed in GBP?**
+In the $gbpsum variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'price' and I am applying sum() method to sum the returned data.
+
+
+Sum the cost of orders that were placed in GBP and were shipped to Essex?**
+In the $gbpsumessex variable im having the $items varibale which is already collection and Im applying the fillter method to the collection and then I am returning the 'currency' array element equal on 'GBP'  AND array element 'county' and I am applying sum() method to sum the returned data.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Contributing
 
