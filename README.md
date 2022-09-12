@@ -15,7 +15,7 @@ The method in the controller doing the action and sending the data to the front-
 ## Answers
 
 
-- Count the total number of orders?**
+<b>Count the total number of orders?</b>
 - I create variable which is holding the $items variable as a collection and then I create another variable $allcount which is holding $all variable with applied count() method on it to count the returned data.
 
 
